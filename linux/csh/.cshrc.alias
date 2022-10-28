@@ -1,0 +1,30 @@
+###############################################################################
+##
+## Aliases
+##
+###############################################################################
+
+# Colorize
+alias ls 'ls --color=always'
+alias ll 'ls --color=always -lrt'
+alias tree 'tree -C'
+# Search
+alias gp "grep -rn \!:1 . --color"
+alias gpr "grep -Rn \!:1 . --color"
+
+# Shortcuts
+alias fi "find . -name '\!:1' -print"
+
+################################################################
+
+# Make directory and go to created directory
+alias mkcd 		"mkdir \!*; cd \!*"
+
+# Extract tar.gz file
+alias tarx "tar -zxvf \!*"
+
+# Compress directory to tar.gz file
+alias tarc "tar -zcvf \!:2.tar.gz \!:1"
+
+# Common aliases
+alias du        "du --max-depth=1 -h -a ./"

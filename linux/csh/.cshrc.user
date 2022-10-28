@@ -1,0 +1,35 @@
+###############################################################################
+##
+## csh Terminal Customizations
+##
+###############################################################################
+
+## Skip remaining setup if not an interactive shell
+if ($?USER == 0 || $?prompt == 0) exit
+
+# To add custom pathing create (or edit) the ~/.ownptah file and add 
+# your custom pathing in that file. Paths added will be loaded when the
+# own module is loaded.
+
+##  To be able to use "Control-D" to log out, uncomment the following line
+# unset ignoreeof
+
+##  To change the number of lines in history, uncomment the following line
+#set history=40
+#set savehist=40
+
+##  To set your editor, uncomment the following line and change to your
+##  editor of choice
+# setenv EDITOR '/path/to/editor'
+
+### PROMPT
+if ( -f $HOME/.cshrc.prompt ) then
+  source $HOME/.cshrc.prompt
+endif
+
+### ALIASES
+if ( -f $HOME/.cshrc.alias ) then
+  source $HOME/.cshrc.alias
+endif
+
+
